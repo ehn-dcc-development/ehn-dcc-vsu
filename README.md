@@ -89,9 +89,9 @@ Of importance here is that it is the client who maintains control of whether it 
 
 Note that simply polling for a timestamp requires very few bytes of traffic so this goes a long way to mitigating the main drawback of increased bandwith usage associated with the client-pull mode. It can be argued that the valuesets with a total size of single-digit kilobytes is by modern standards also minimal, perhaps even negligible. 
 
-However, it is important cases to be keep in mind that we have a scenario of WAN connectivity with many hundreds (if not thousands) of clients. 
+However, it is important to keep in mind that we have a scenario of WAN connectivity with many hundreds (if not thousands) of clients. 
 Each of these clients will be reasonably regularly polling the server. This linearly increases the amount of data the server has to serve by the number of clients. 
-Keeping the amount of returned data to a minimum for the standard poll requests means we can limit the amount of data the server has to serve not just by the different between the size in timestamp and the valueset but that difference multiplied by the number of clients. 
+Keeping the amount of returned data to a minimum for the standard poll requests means we can limit the amount of data the server has to serve not just by the difference between the size in timestamp and the valueset but that difference multiplied by the number of clients. 
 Keeping the amount of data low in a standard polling scenario (obtaining the timestamp) helps maintain a robust and responsive server-side service since there will be a far lower probability of network saturation than if the whole valueset is returned each time.
 
 ### Server End-Points
