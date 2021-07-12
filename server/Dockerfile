@@ -1,4 +1,4 @@
-FROM alpine:3.12.4
+FROM alpine:latest
 
 ENTRYPOINT ["/bin/bash", "/home/euvsc/entrypoint.sh"]
 WORKDIR /home/euvsc
